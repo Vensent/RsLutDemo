@@ -5,7 +5,6 @@
 #define MAXOF2(a, b) ((a)>(b)?(a):(b))
 #define CLAMP(a, min, max)    ((a)<(min)?(min):((a)>(max)?(max):(a)))
 #define CLAMPTOP(a, val)    ((a)<(val)?(a):(val))
-#define CLAMPBOTTOM(a, val)    ((a)>(val)?(a):(val))
 
 void basicLumaContrast(float *r, float *g, float *b, float bleachAmount);
 
@@ -54,7 +53,7 @@ float *createDefaultCube(int size) {
     return cube;
 }
 
-int getRGBColor(float r, float g, float b) {
+int Get_RGB_Color_Value(float r, float g, float b) {
     int rcol = (int) (255 * CLAMP(r, 0.f, 1.f));
     int gcol = (int) (255 * CLAMP(g, 0.f, 1.f));
     int bcol = (int) (255 * CLAMP(b, 0.f, 1.f));
@@ -89,7 +88,7 @@ void *CreativeLut_BleachBypass(int *out, int size, float amount) {
                 cube[ce + 1] = jj;
                 cube[ce + 2] = kk;
 
-                out[m++] = getRGBColor(ii, jj, kk);
+                out[m++] = Get_RGB_Color_Value(ii, jj, kk);
             }
         }
     }
@@ -139,7 +138,7 @@ void *CreativeLut_3Strip(int *out, int size, float amount) {
                 cube[ce + 1] = jj;
                 cube[ce + 2] = kk;
 
-                out[m++] = getRGBColor(ii, jj, kk);
+                out[m++] = Get_RGB_Color_Value(ii, jj, kk);
             }
         }
     }
@@ -209,7 +208,7 @@ void *CreativeLut_Filum2(int *out, int size, float amount) {
                 cube[ce + 1] = jj;
                 cube[ce + 2] = kk;
 
-                out[x++] = getRGBColor(ii, jj, kk);
+                out[x++] = Get_RGB_Color_Value(ii, jj, kk);
             }
         }
     }

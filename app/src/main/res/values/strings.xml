@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">RsLutDemo</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">LUT3D Demo</string>
+    <string name="main_activity_title">Please select a loading mode.</string>
+    <string name="load_from_png">Load 3D LUT from a PNG image.</string>
+    <string name="load_through_jni">Load 3D LUT through processing JNI.</string>
+    <string name="load_from_cube_file">Load 3D LUT from a cube file.</string>
 </resources>
