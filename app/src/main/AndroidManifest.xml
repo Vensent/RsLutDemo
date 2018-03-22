@@ -30,6 +30,7 @@
             android:name=".LoadCubeFileActivity"
             android:label="@string/load_from_cube_file"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LoadCubeFileJniActivity"></activity>
     </application>
 
 </manifest>

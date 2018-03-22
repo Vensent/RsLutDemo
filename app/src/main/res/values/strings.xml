@@ -4,4 +4,5 @@
     <string name="load_from_png">Load 3D LUT from a PNG image.</string>
     <string name="load_through_jni">Load 3D LUT through processing JNI.</string>
     <string name="load_from_cube_file">Load 3D LUT from a cube file.</string>
+    <string name="load_from_cube_file_via_jni">Load 3D LUT from a cube file via JNI.</string>
 </resources>

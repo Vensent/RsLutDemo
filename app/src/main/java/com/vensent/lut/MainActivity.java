@@ -19,10 +19,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnLoadFromPng = findViewById(R.id.btn_load_from_png);
         Button btnLoadThroughJni = findViewById(R.id.btn_load_through_jni);
         Button btnLoadFromCubeFile = findViewById(R.id.btn_load_from_cube_file);
+        Button btnLoadFromCubeFileViaJni = findViewById(R.id.btn_load_from_cube_file_via_jni);
 
         btnLoadFromPng.setOnClickListener(this);
         btnLoadThroughJni.setOnClickListener(this);
         btnLoadFromCubeFile.setOnClickListener(this);
+        btnLoadFromCubeFileViaJni.setOnClickListener(this);
     }
 
     @Override
@@ -39,6 +41,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_load_from_cube_file:
                 intent = new Intent(this, LoadCubeFileActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_load_from_cube_file_via_jni:
+                intent = new Intent(this, LoadCubeFileJniActivity.class);
                 startActivity(intent);
                 break;
         }

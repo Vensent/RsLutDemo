@@ -17,7 +17,6 @@
         android:id="@+id/btn_load_through_jni"
         android:layout_width="256dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="@dimen/fab_margin"
         android:layout_marginTop="@dimen/fab_margin"
         android:text="@string/load_through_jni" />
 
@@ -25,5 +24,13 @@
         android:id="@+id/btn_load_from_cube_file"
         android:layout_width="256dp"
         android:layout_height="56dp"
+        android:layout_marginTop="@dimen/fab_margin"
         android:text="@string/load_from_cube_file" />
+
+    <Button
+        android:id="@+id/btn_load_from_cube_file_via_jni"
+        android:layout_width="256dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="@string/load_from_cube_file_via_jni" />
 </LinearLayout>
