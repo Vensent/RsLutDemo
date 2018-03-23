@@ -38,17 +38,17 @@ Java_com_jni_ReadingAssets_readingCubeFileFromAssets(JNIEnv *env, jclass type, j
     jint *out = env->GetIntArrayElements(out_, NULL);
     const char *fileName = env->GetStringUTFChars(filename_, 0);
 
-    LOGI("ReadAssets");
+    LOGD("ReadAssets started.");
     AAssetManager *mgr = AAssetManager_fromJava(env, assetManager);
     if (mgr == NULL) {
-        LOGI(" %s", "AAssetManager==NULL");
+        LOGE(" %s", "AAssetManager==NULL");
         return -1;
     }
 
     /*获取文件名并打开*/
     AAsset *asset = AAssetManager_open(mgr, fileName, AASSET_MODE_UNKNOWN);
     if (asset == NULL) {
-        LOGI(" %s", "asset==NULL");
+        LOGE(" %s", "asset==NULL");
         return -1;
     }
 
@@ -65,6 +65,7 @@ Java_com_jni_ReadingAssets_readingCubeFileFromAssets(JNIEnv *env, jclass type, j
 
     env->ReleaseIntArrayElements(out_, out, 0);
     env->ReleaseStringUTFChars(filename_, fileName);
+    LOGD("ReadAssets finished.");
     return result;
 }
 
@@ -155,7 +156,6 @@ int Parse_Buffer(int *lut, char *buffer) {
             StringToFloat(&rValue, parts[2].c_str());
             lut[i++] = Get_RGB_Color_Value(bValue, gValue, rValue);
         }
-        parts.clear();
     }
 
     return lut3dSize;
