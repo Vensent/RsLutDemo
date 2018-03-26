@@ -33,4 +33,18 @@
         android:layout_height="56dp"
         android:layout_marginTop="@dimen/fab_margin"
         android:text="@string/load_from_cube_file_via_jni" />
+
+    <Button
+        android:id="@+id/btn_adjust_strength_via_image_blending"
+        android:layout_width="256dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="@string/adjust_strength_via_image_blending" />
+
+    <Button
+        android:id="@+id/btn_adjust_strength_via_lut_interpolated"
+        android:layout_width="256dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="@string/adjust_strength_via_lut_interpolated" />
 </LinearLayout>

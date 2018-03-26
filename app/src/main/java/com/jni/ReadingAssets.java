@@ -13,4 +13,10 @@ public class ReadingAssets {
     }
 
     public static native int readingCubeFileFromAssets(int out[], AssetManager assetsManager, String fileName);
+
+    public static native void getIdenticalCubeLut(float identicalLut[], int size);
+
+    public static native void getStrengthCubeLut(int out[], float originalLut[], float identicalLut[], int size, float strength);
+
+    public static native int readingCubeFileDetailFromAssets(float[] originalLut, AssetManager assets, String file);
 }

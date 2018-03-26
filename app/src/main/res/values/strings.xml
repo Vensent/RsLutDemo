@@ -5,4 +5,6 @@
     <string name="load_through_jni">Load 3D LUT through processing JNI.</string>
     <string name="load_from_cube_file">Load 3D LUT from a cube file.</string>
     <string name="load_from_cube_file_via_jni">Load 3D LUT from a cube file via JNI.</string>
+    <string name="adjust_strength_via_image_blending">Adjust effect strength with image blending.</string>
+    <string name="adjust_strength_via_lut_interpolated">Adjust effect strength with linear-interpolated LUT.</string>
 </resources>

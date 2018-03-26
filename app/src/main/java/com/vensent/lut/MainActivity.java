@@ -20,11 +20,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnLoadThroughJni = findViewById(R.id.btn_load_through_jni);
         Button btnLoadFromCubeFile = findViewById(R.id.btn_load_from_cube_file);
         Button btnLoadFromCubeFileViaJni = findViewById(R.id.btn_load_from_cube_file_via_jni);
+        Button btnAdjustStrengthBlending = findViewById(R.id.btn_adjust_strength_via_image_blending);
+        Button btnAdjustStrengthInterpolated = findViewById(R.id.btn_adjust_strength_via_lut_interpolated);
 
         btnLoadFromPng.setOnClickListener(this);
         btnLoadThroughJni.setOnClickListener(this);
         btnLoadFromCubeFile.setOnClickListener(this);
         btnLoadFromCubeFileViaJni.setOnClickListener(this);
+        btnAdjustStrengthBlending.setOnClickListener(this);
+        btnAdjustStrengthInterpolated.setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +49,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_load_from_cube_file_via_jni:
                 intent = new Intent(this, LoadCubeFileJniActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_adjust_strength_via_image_blending:
+                intent = new Intent(this, AdjustStrengthBlendingActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_adjust_strength_via_lut_interpolated:
+                intent = new Intent(this, AdjustStrengthLutActivity.class);
                 startActivity(intent);
                 break;
         }

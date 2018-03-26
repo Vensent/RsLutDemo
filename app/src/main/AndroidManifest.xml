@@ -30,7 +30,15 @@
             android:name=".LoadCubeFileActivity"
             android:label="@string/load_from_cube_file"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LoadCubeFileJniActivity"></activity>
+        <activity
+            android:name=".LoadCubeFileJniActivity"
+            android:label="@string/load_from_cube_file_via_jni"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdjustStrengthBlendingActivity"
+            android:label="@string/load_from_cube_file_via_jni"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AdjustStrengthLutActivity"></activity>
     </application>
 
 </manifest>
